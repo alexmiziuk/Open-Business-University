@@ -50,7 +50,6 @@ main {
 	font-size: 31px;
 	font-weight: 100;
 	display: flex;
-
 	justify-content: center;
 	cursor: pointer !important;
 	border: solid 1px rgb(86, 0, 225);
@@ -129,12 +128,12 @@ main {
 	font-size: 60px;
 	line-height: 60px;
 }
-.promo-wrapper-screensaver{
+/* .promo-wrapper-screensaver {
 	display: block;
 }
-.promo-wrapper-screensaver-second{
+.promo-wrapper-screensaver-second {
 	display: none;
-}
+} */
 
 .comments-wrapper {
 	background: rgb(39, 39, 39);
@@ -1292,7 +1291,7 @@ textarea {
 }
 @media (max-width: 350px) {
 	.promo-img-second {
-		height:101%;
+		height: 101%;
 		object-position: -40px 0px;
 	}
 	.promo-wrapper-screensaver {

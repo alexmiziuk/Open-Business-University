@@ -1,15 +1,13 @@
 function showComment(event) {
-	event.preventDefault(); // Останавливаем стандартное поведение формы
+	event.preventDefault();
 
-	// Получаем значение из поля ввода
 	const commentText = document.getElementById("comment-text").value;
 	let name = document.getElementById("nameInput").value;
 
 	if (name.trim() === "") {
 		name = "Имя пользователя";
-  }
+	}
 
-	// Создаем блок с комментарием и его содержимым
 	const commentBlock = document.createElement("div");
 	commentBlock.classList.add("comments-member");
 
@@ -26,7 +24,6 @@ function showComment(event) {
 	timeBlock.classList.add("comments-member-time");
 	timeBlock.textContent = "2 дня назад"
 
-
 	const responseBlock = document.createElement("div");
 	responseBlock.classList.add("comments-member-response");
 	responseBlock.textContent = commentText;
@@ -34,16 +31,13 @@ function showComment(event) {
 	const answerContainer = document.createElement("div");
 	answerContainer.classList.add("comments-member-answer-container");
 
-	// Создаем кнопку ответа
 	const answerButton = document.createElement("button");
 	answerButton.classList.add("comments-member-answer");
 	answerButton.textContent = "Ответить";
 
-	// Создаем блок символов ответа (лайки, дизлайки, настройки)
 	const symbolsBlock = document.createElement("div");
 	symbolsBlock.classList.add("comments-member-answer-symbols");
 
-	// Создаем кнопку лайка
 	const likeButton = document.createElement("button");
 	likeButton.classList.add("comments-member-button-like");
 	const likeIcon = document.createElement("img");
@@ -51,12 +45,10 @@ function showComment(event) {
 	likeIcon.src = "./resourse/icons/like.png";
 	likeButton.appendChild(likeIcon);
 
-	// Создаем блок для числа лайков
 	const likeNumbers = document.createElement("div");
 	likeNumbers.classList.add("comments-member-like-numbers");
 	likeNumbers.textContent = "1";
 
-	// Создаем кнопку дизлайка
 	const dislikeButton = document.createElement("button");
 	dislikeButton.classList.add("comments-member-button-dislike");
 	const dislikeIcon = document.createElement("img");
@@ -64,12 +56,10 @@ function showComment(event) {
 	dislikeIcon.src = "./resourse/icons/dislike.png";
 	dislikeButton.appendChild(dislikeIcon);
 
-	// Создаем блок для числа дизлайков
 	const dislikeNumbers = document.createElement("div");
 	dislikeNumbers.classList.add("comments-member-dislike-numbers");
 	dislikeNumbers.textContent = "0";
 
-	// Создаем кнопку настроек
 	const settingsButton = document.createElement("button");
 	settingsButton.classList.add("customer-member-button-setting");
 	const settingsIcon = document.createElement("img");
@@ -77,34 +67,65 @@ function showComment(event) {
 	settingsIcon.src = "./resourse/icons/tree-points.png";
 	settingsButton.appendChild(settingsIcon);
 
-	// Добавляем все созданные элементы в блок символов ответа
 	symbolsBlock.appendChild(likeButton);
 	symbolsBlock.appendChild(likeNumbers);
 	symbolsBlock.appendChild(dislikeButton);
 	symbolsBlock.appendChild(dislikeNumbers);
 	symbolsBlock.appendChild(settingsButton);
 
-	// Добавляем кнопку ответа и блок символов в контейнер для ответов
 	answerContainer.appendChild(answerButton);
 	answerContainer.appendChild(symbolsBlock);
 
-	// Вставляем созданные элементы в блок комментария
 	commentBlock.appendChild(nameBlock);
 	commentBlock.appendChild(avatar);
 	commentBlock.appendChild(timeBlock)
 	commentBlock.appendChild(responseBlock);
 	commentBlock.appendChild(answerContainer);
-
-	// Получаем ссылку на элемент commentSection
 	const commentSection = document.getElementById("commentSection");
-
-	// Вставляем созданный блок комментария в commentSection
 	commentSection.appendChild(commentBlock);
 }
 
-const currentTime = moment();
-console.log(currentTime);
 document.addEventListener('DOMContentLoaded', function () {
+	const currentTime = moment();
+	const screensaverSecond = document.querySelector('.promo-wrapper-screensaver-second');
+	const startImageTimeOnePeriod = moment().set({ hour: 21, minute: 0, second: 0 });
+	const endImageTimeOnePeriod = moment().set({ hour: 11, minute: 59, second: 59 });
+
+	const startImageTimeTwoPeriod = moment().set({ hour: 0, minute: 0, second: 1 });
+	const endImageTimeTwoPeriod = moment().set({ hour: 18, minute: 0, second: 0 });
+
+	const startVideoTime = moment().set({ hour: 18, minute: 0, second: 0 });
+	const endVideoTime = moment().set({ hour: 21, minute: 0, second: 0 });
+
+	const startBannerTime = moment().set({ hour: 18, minute: 20, second: 0 });
+	const endBannerTime = moment().set({ hour: 21, minute: 0, second: 0 });
+
+	if (currentTime.isBetween(startImageTimeOnePeriod, endImageTimeOnePeriod)) {
+		screensaverSecond.classList.remove('hidden');
+	} else {
+		screensaverSecond.classList.add('hidden');
+	}
+	if (currentTime.isBetween(startImageTimeTwoPeriod, endImageTimeTwoPeriod)) {
+		screensaverSecond.classList.remove('hidden');
+	} else {
+		screensaverSecond.classList.add('hidden');
+	}
+	if (currentTime.isBetween(startVideoTime, endVideoTime)) {
+		document.querySelector('.promo-wrapper-screensaver').classList.remove('hidden');
+	} else {
+		document.querySelector('.promo-wrapper-screensaver').classList.add('hidden');
+	}
+	if (currentTime.isBetween(startBannerTime, endBannerTime)) {
+		document.querySelector('.banner').classList.remove('hidden');
+	} else {
+		document.querySelector('.banner').classList.add('hidden');
+	}
+	if (currentTime.isBetween(startBannerTime, endBannerTime)) {
+		document.querySelector('.cards').classList.remove('hidden');
+	} else {
+		document.querySelector('.cards').classList.add('hidden');
+	}
+
 	(function initPlayVideo() {
 		const videoCover = document.querySelector(".promo-wrapper-screensaver");
 		const iframe = document.querySelector("iframe");
@@ -125,6 +146,3 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	})();
 });
-
-
-
