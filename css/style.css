@@ -123,6 +123,15 @@ main {
 	font-weight: 500;
 	line-height: 68px;
 }
+.promo-time {
+	position: absolute;
+	color: rgb(255, 255, 255);
+	text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 120px;
+	right: 90px;
+}
 .promo-title-second {
 	color: rgb(255, 255, 255);
 	font-size: 60px;
@@ -414,7 +423,7 @@ textarea {
 }
 .banner-btn {
 	background: rgb(86, 0, 225);
-	padding: 16px 14px;
+	padding: 16px 0;
 	color: rgb(255, 255, 255);
 	font-size: 15px;
 	font-weight: 700;
@@ -422,6 +431,8 @@ textarea {
 	margin-top: 12px;
 	border: none;
 	cursor: pointer;
+	width: 300px;
+	text-align: center;
 }
 .banner-great-img {
 	display: none;
@@ -600,6 +611,9 @@ textarea {
 	.promo-item {
 		left: 40px;
 	}
+	.promo-time {
+		right: 67px;
+	}
 	.promo-title-box,
 	.promo-title-box-second {
 		left: 40px;
@@ -635,7 +649,7 @@ textarea {
 		justify-content: flex-start;
 	}
 	.banner-btn {
-		padding: 12.5px 14px;
+		padding: 12.5px 0;
 	}
 	.banner-block-second {
 		display: block;
@@ -682,6 +696,15 @@ textarea {
 	.promo-item,
 	.promo-item-second {
 		left: 20px;
+	}
+	.promo-time {
+		position: absolute;
+		color: rgb(255, 255, 255);
+		text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 120px;
+		right: 20px;
 	}
 	.promo-title-box,
 	.promo-title-box-second {
@@ -738,6 +761,15 @@ textarea {
 	}
 }
 @media (max-width: 1100px) {
+	.promo-time {
+		position: absolute;
+		color: rgb(255, 255, 255);
+		text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 120px;
+		top: 2px;
+	}
 	.promo-wrapper-screensaver,
 	.promo-wrapper-screensaver-second {
 		width: 507px;
@@ -776,6 +808,7 @@ textarea {
 	.banner-btn {
 		margin-top: 16px;
 		font-size: 13px;
+		width: 250px;
 	}
 	.footer-container {
 		flex-direction: column;
@@ -819,6 +852,15 @@ textarea {
 	.promo-item,
 	.promo-item-second {
 		font-size: 16px;
+	}
+	.promo-time {
+		position: absolute;
+
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 24px;
+		right: 415px;
+		top: 14px;
 	}
 	.promo-title,
 	.promo-title-second {
@@ -907,6 +949,7 @@ textarea {
 	.banner-btn {
 		padding: 16px 14px;
 		font-size: 16px;
+		width: 300px;
 	}
 	.footer-container {
 		margin-top: 50.5px;
@@ -961,6 +1004,11 @@ textarea {
 	.promo-btn-container {
 		right: -14px;
 	}
+	.promo-time {
+		right: 28px;
+		top: 39px;
+	}
+
 	.banner {
 		background-image: url("../resourse/background/bannerSecond.jpg");
 		background-position: right 0 top -58px;
@@ -1191,6 +1239,11 @@ textarea {
 		left: 15px;
 		font-size: 9px;
 	}
+	.promo-time {
+		right: 12px;
+		top: 4.5px;
+		font-size: 9px;
+	}
 	.promo-title-box,
 	.promo-title-box-second {
 		left: 15px;
@@ -1208,7 +1261,8 @@ textarea {
 		max-width: 182px;
 	}
 	.promo-img-second {
-		object-position: 5px 0px;
+		object-position: 3px 0px;
+		height: 241px;
 	}
 	.promo-question-title {
 		font-size: 14px;
@@ -1248,7 +1302,8 @@ textarea {
 	.banner-btn {
 		font-size: 14px;
 		font-weight: 700;
-		padding: 16px 17px;
+		padding: 16px 0;
+		width: 280px;
 	}
 	.banner {
 		background-position: right 0 top 11px;
