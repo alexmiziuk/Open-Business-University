@@ -100,12 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const startBannerTime = moment().set({ hour: 18, minute: 20, second: 0 });
 	const endBannerTime = moment().set({ hour: 21, minute: 0, second: 0 });
 
-	if (currentTime.isBetween(startImageTimeOnePeriod, endImageTimeOnePeriod)) {
-		screensaverSecond.classList.remove('hidden');
-	} else {
-		screensaverSecond.classList.add('hidden');
-	}
-	if (currentTime.isBetween(startImageTimeTwoPeriod, endImageTimeTwoPeriod)) {
+	if (currentTime.isBetween(startImageTimeOnePeriod, endImageTimeOnePeriod) ||
+		currentTime.isBetween(startImageTimeTwoPeriod, endImageTimeTwoPeriod)) {
 		screensaverSecond.classList.remove('hidden');
 	} else {
 		screensaverSecond.classList.add('hidden');
@@ -117,12 +113,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	if (currentTime.isBetween(startBannerTime, endBannerTime)) {
 		document.querySelector('.banner').classList.remove('hidden');
-	} else {
-		document.querySelector('.banner').classList.add('hidden');
-	}
-	if (currentTime.isBetween(startBannerTime, endBannerTime)) {
+		document.querySelector('.promo-question-title').classList.remove('hidden');
 		document.querySelector('.cards').classList.remove('hidden');
 	} else {
+		document.querySelector('.banner').classList.add('hidden');
+		document.querySelector('.promo-question-title').classList.add('hidden');
 		document.querySelector('.cards').classList.add('hidden');
 	}
 
