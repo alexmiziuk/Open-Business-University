@@ -752,6 +752,13 @@ textarea {
 		margin-top: 3px;
 		width: 255px;
 	}
+	.cards-wrapper {
+		display: grid;
+		grid-template: repeat(4, 100px) / 95%;
+		gap: 40px 48px;
+		margin: 0 auto !important;
+		max-width: 748px;
+  }
 	.footer-container {
 		width: 1068px;
 	}
@@ -977,11 +984,6 @@ textarea {
 	}
 	.footer-contacts {
 		width: 578px;
-	}
-}
-@media (max-width: 924px) {
-	.cards-wrapper {
-		grid-template: repeat(2, 100px) / repeat(2, 308px);
 	}
 }
 @media (max-width: 850px) {
