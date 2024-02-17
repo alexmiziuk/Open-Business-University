@@ -1182,6 +1182,7 @@ textarea {
 	.promo-img,
 	.promo-img-second {
 		width: 100%;
+		object-position: right -88px top 50%;
 	}
 	.promo-img-second {
 		object-position: center;
@@ -1203,6 +1204,9 @@ textarea {
 	}
 }
 @media (max-width: 549px) {
+	.promo-img {
+		object-position: right -114px top 50%;
+	}
 	.banner-block-first-text {
 		width: 301px;
 	}
@@ -1272,7 +1276,7 @@ textarea {
 	}
 	.promo-img,
 	.promo-img-second {
-		height: 242.86px;
+		height: 243.86px;
 		width: 101%;
 		object-position: right 0 top 50%;
 	}
