@@ -137,13 +137,6 @@ main {
 	font-size: 60px;
 	line-height: 60px;
 }
-/* .promo-wrapper-screensaver {
-	display: block;
-}
-.promo-wrapper-screensaver-second {
-	display: none;
-} */
-
 .comments-wrapper {
 	background: rgb(39, 39, 39);
 	padding: 30px 20px 21px 20px;
@@ -349,7 +342,7 @@ textarea {
 	background-size: cover;
 	background-position: right -42px top 50%;
 	width: 100%;
-	height: 140px;
+	min-height: 140px;
 	margin-top: 25px;
 }
 .banner-box {
@@ -360,7 +353,7 @@ textarea {
 	text-decoration: none;
 }
 .banner-block-first {
-	width: 276px;
+	width: 279px;
 	display: block;
 }
 .banner-details-doubler {
@@ -397,7 +390,7 @@ textarea {
 	font-size: 15px;
 	font-weight: 700;
 	line-height: 21px;
-	width: 276px;
+	width: 280px;
 	margin-top: 10px;
 }
 .banner-block-second {
@@ -409,7 +402,7 @@ textarea {
 	font-size: 15px;
 	font-weight: 700;
 	line-height: 21px;
-	width: 514px;
+	width: 522px;
 	margin-top: 13px;
 }
 .banner-block-second-text span {
