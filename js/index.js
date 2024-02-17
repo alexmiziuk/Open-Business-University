@@ -83,6 +83,9 @@ function showComment(event) {
 	commentBlock.appendChild(answerContainer);
 	const commentSection = document.getElementById("commentSection");
 	commentSection.appendChild(commentBlock);
+
+	document.getElementById("comment-text").value = "";
+	document.getElementById("nameInput").value = "";
 }
 
 document.addEventListener('DOMContentLoaded', function () {
