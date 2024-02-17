@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const currentTime = moment();
 	const screensaverSecond = document.querySelector('.promo-wrapper-screensaver-second');
 	const startImageTimeOnePeriod = moment().set({ hour: 21, minute: 0, second: 0 });
-	const endImageTimeOnePeriod = moment().set({ hour: 11, minute: 59, second: 59 });
+	const endImageTimeOnePeriod = moment().set({ hour: 23, minute: 59, second: 59 });
 
 	const startImageTimeTwoPeriod = moment().set({ hour: 0, minute: 0, second: 1 });
 	const endImageTimeTwoPeriod = moment().set({ hour: 18, minute: 0, second: 0 });
