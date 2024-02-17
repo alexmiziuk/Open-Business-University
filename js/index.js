@@ -86,7 +86,7 @@ function showComment(event) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	/* const currentTime = moment();
+	const currentTime = moment();
 	const screensaverSecond = document.querySelector('.promo-wrapper-screensaver-second');
 	const startImageTimeOnePeriod = moment().set({ hour: 21, minute: 0, second: 0 });
 	const endImageTimeOnePeriod = moment().set({ hour: 11, minute: 59, second: 59 });
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('.banner').classList.add('hidden');
 		document.querySelector('.promo-question-title').classList.add('hidden');
 		document.querySelector('.cards').classList.add('hidden');
-	} */
+	}
 
 	(function initPlayVideo() {
 		const videoCover = document.querySelector(".promo-wrapper-screensaver");
