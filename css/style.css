@@ -1407,6 +1407,22 @@ textarea {
 	.footer-contacts {
 		justify-content: space-between;
 	}
+	.comments-member-answer-like {
+		padding-left: 26px;
+	}
+	.comments-member-like-numbers {
+		margin-right: 3px;
+	}
+	.comments-member-answer-symbols {
+		align-items: flex-start;
+	}
+	.comments-member-like-numbers,
+	.comments-member-dislike-numbers {
+		margin-top: -1px;
+	}
+	.comments-number-setting  {
+		margin-top: 7px;
+	}
 }
 @media (max-width: 350px) {
 	.promo-img-second {
